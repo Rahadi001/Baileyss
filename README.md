@@ -1,6 +1,6 @@
 
 <div align="center">
-  <h1>OURIN BAILEYS</h1>
+  <h1>RAHADI BAILEYS</h1>
   <img src="https://files.catbox.moe/4n0efj.jpg" alt="Thumbnail" width='100%' />
 </div>
 
@@ -28,16 +28,16 @@ Baileys is a fork from github https://github.com/Nted3xec/baileys
 Tag/Label Member Grop
 
 ```javascript
-await ourin.setLabelGroup(jid, string)
+await rahadi.setLabelGroup(jid, string)
 ```
 ---
 ### Delay
 Sleep code ( hehe )
 
 ```javascript
-await ourin.delay(seconds) // ex. 3 ( 3 seconds )
+await rahadi.delay(seconds) // ex. 3 ( 3 seconds )
 // example
-await ourin.delay(3)
+await rahadi.delay(3)
 ```
 ---
 ### React Message
@@ -46,7 +46,7 @@ Send Reaction into the Message
 ```javascript
 await ourin.react(m, emoji) 
 // Example 
-await ourin.react(m, "😚") 
+await rahadi.react(m, "😚") 
 ```
 ---
 ### Delete React Message
@@ -54,14 +54,14 @@ Delete Reaction into the Message
 
 ```javascript
 // Example 
-await ourin.unreact(m) 
+await rahadi.unreact(m) 
 ```
 ---
 ### Check ID Channel / Newsletter / Saluran
 Get ID Channel From Url
 
 ```javascript
-await ourin.cekIDSaluran(url)
+await rahadi.cekIDSaluran(url)
 ```
 Result JSON
 ```json
@@ -81,24 +81,24 @@ Result JSON
 Just one line, not use array, just string with space " "
 
 ```javascript
-await ourin.newsletterMultipleFollow(jids)
+await rahadi.newsletterMultipleFollow(jids)
 // Example
-await ourin.newsletterMultipleFollow("120xxxxxxx@newsletter 120xxxxxxxxx@newsletter 120xxxxxxx@newsletter")
+await rahadi.newsletterMultipleFollow("120xxxxxxx@newsletter 120xxxxxxxxx@newsletter 120xxxxxxx@newsletter")
 ```
 ---
 ### Check banned number
 You can see the status of blocked numbers here 
 
 ```javascript
-ourin.checkBanned(jid)
+rahadi.checkBanned(jid)
 ```
 ---
 ### Edit Message
 Edit your previously sent message
 ```js
-await ourin.edit(m, newText)
+await rahadi.edit(m, newText)
 // Example
-await ourin.edit(m, "this is edited message")
+await rahadi.edit(m, "this is edited message")
 ```
 Notes
 - Only works for messages sent by yourself
@@ -107,9 +107,9 @@ Notes
 ### Delete / Revoke Message
 Delete or revoke a message
 ```js
-await ourin.del(m)
+await rahadi.del(m)
 // Example
-await ourin.del(m)
+await rahadi.del(m)
 ```
 
 Notes
@@ -121,9 +121,9 @@ Notes
 ### Detect Message
 Detect message type from incoming message object.
 ```js
-ourin.detect(m)
+rahadi.detect(m)
 // Example
-const type = ourin.detect(m)
+const type = rahadi.detect(m)
 if (type === 'image') {
     // handle image message
 }
@@ -160,14 +160,14 @@ Status Mention Group & Private Message
 Send Status Mention Group/Private Chat
 
 ```javascript
-await ourin.sendStatusMention(content, jid);
+await rahadi.sendStatusMention(content, jid);
 ```
 
 ### Status Group Message V2
 Send Group Status With Version 2 
 
 ```javascript
-await ourin.sendMessage(jid, {
+await rahadi.sendMessage(jid, {
      groupStatusMessage: {
           text: "Hello World"
      }
@@ -178,7 +178,7 @@ await ourin.sendMessage(jid, {
 Send multiple images in a single album message:
 
 ```javascript
-await ourin.sendMessage(jid, { 
+await rahadi.sendMessage(jid, { 
     albumMessage: [
         { image: buffer, caption: "Foto pertama" },
         { image: { url: "URL IMAGE" }, caption: "Foto kedua" }
@@ -190,7 +190,7 @@ await ourin.sendMessage(jid, {
 Create and send WhatsApp event invitations:
 
 ```javascript
-await ourin.sendMessage(jid, { 
+await rahadi.sendMessage(jid, { 
     eventMessage: { 
         isCanceled: false, 
         name: "Hello World", 
@@ -212,7 +212,7 @@ await ourin.sendMessage(jid, {
 Display poll results with vote counts:
 
 ```javascript
-await ourin.sendMessage(jid, { 
+await rahadi.sendMessage(jid, { 
     pollResultMessage: { 
         name: "Hello World", 
         pollVotes: [
@@ -233,7 +233,7 @@ await ourin.sendMessage(jid, {
 Send basic interactive messages with copy button functionality:
 
 ```javascript
-await ourin.sendMessage(jid, {
+await rahadi.sendMessage(jid, {
     interactiveMessage: {
         header: "Hello World",
         title: "Hello World",
@@ -256,17 +256,17 @@ await ourin.sendMessage(jid, {
 Send interactive messages with buttons, copy actions, and native flow features:
 
 ```javascript
-await ourin.sendMessage(jid, {    
+await rahadi.sendMessage(jid, {    
     interactiveMessage: {      
         header: "Hello World",
         title: "Hello World",      
-        footer: "OURIN MD",      
+        footer: "Bot MD",      
         image: { url: "https://example.com/image.jpg" },      
         nativeFlowMessage: {        
             messageParamsJson: JSON.stringify({          
                 limited_time_offer: {            
                     text: "idk hummmm?",            
-                    url: "https://ourin.site",            
+                    url: "https://rahadi.site",            
                     copy_code: "zanxnpc",            
                     expiration_time: Date.now() * 999          
                 },          
@@ -335,7 +335,7 @@ await ourin.sendMessage(jid, {
 Send interactive messages with thumbnail image and copy button:
 
 ```javascript
-await ourin.sendMessage(jid, {
+await rahadi.sendMessage(jid, {
     interactiveMessage: {
         header: "Hello World",
         title: "Hello World",
@@ -359,7 +359,7 @@ await ourin.sendMessage(jid, {
 Send product catalog messages with buttons and merchant information:
 
 ```javascript
-await ourin.sendMessage(jid, {
+await rahadi.sendMessage(jid, {
     productMessage: {
         title: "Produk Contoh",
         description: "Ini adalah deskripsi produk",
@@ -388,7 +388,7 @@ await ourin.sendMessage(jid, {
 Send interactive messages with document from buffer (file system) - **Note: Documents only support buffer**:
 
 ```javascript
-await ourin.sendMessage(jid, {
+await rahadi.sendMessage(jid, {
     interactiveMessage: {
         header: "Hello World",
         title: "Hello World",
@@ -430,7 +430,7 @@ await ourin.sendMessage(jid, {
 Send interactive messages with document from buffer (file system) without contextInfo and externalAdReply - **Note: Documents only support buffer**:
 
 ```javascript
-await ourin.sendMessage(jid, {
+await rahadi.sendMessage(jid, {
     interactiveMessage: {
         header: "Hello World",
         title: "Hello World",
@@ -460,7 +460,7 @@ Send payment request messages with custom background and sticker:
 let quotedType = m.quoted?.mtype || '';
 let quotedContent = JSON.stringify({ [quotedType]: m.quoted }, null, 2);
 
-await ourin.sendMessage(jid, {
+await rahadi.sendMessage(jid, {
     requestPaymentMessage: {
         currency: "IDR",
         amount: 10000000,
@@ -484,7 +484,7 @@ await ourin.sendMessage(jid, {
 Send a carousel message with multiple cards:
 
 ```javascript
-await ourin.sendMessage(
+await rahadi.sendMessage(
     jid,
     {
         text: 'Body Message',
@@ -545,7 +545,7 @@ await ourin.sendMessage(
 Send a sticker pack with multiple stickers in one message:
 
 ```javascript
-await ourin.sendMessage(jid, {
+await rahadi.sendMessage(jid, {
     stickerPack: {
         name: "My Sticker Pack",
         publisher: "OURIN MD",
@@ -577,38 +577,38 @@ Lightweight media processing functions built directly into the socket. Uses `sha
 Fast image resize with aspect ratio preserved
 
 ```javascript
-const resized = await ourin.resize(buffer, 200, 200)
+const resized = await rahadi.resize(buffer, 200, 200)
 ```
 ---
 ### Convert
 Convert media format — supports `jpeg`, `jpg`, `png`, `webp`, `mp3`, `mp4`
 
 ```javascript
-const mp4 = await ourin.convert(buffer, { to: "mp4" })
-const webp = await ourin.convert(buffer, { to: "webp" })
-const mp3 = await ourin.convert(buffer, { to: "mp3" })
+const mp4 = await rahadi.convert(buffer, { to: "mp4" })
+const webp = await rahadi.convert(buffer, { to: "webp" })
+const mp3 = await rahadi.convert(buffer, { to: "mp3" })
 ```
 ---
 ### To Sticker
 Convert any image to WhatsApp sticker format (512x512 WebP with transparency)
 
 ```javascript
-const sticker = await ourin.toSticker(buffer)
-const sticker = await ourin.toSticker(buffer, { quality: 90 })
+const sticker = await rahadi.toSticker(buffer)
+const sticker = await rahadi.toSticker(buffer, { quality: 90 })
 ```
 ---
 ### Compress
 Compress media with quality control — auto-detects image or video
 
 ```javascript
-const compressed = await ourin.compress(buffer, { quality: 50 })
+const compressed = await rahadi.compress(buffer, { quality: 50 })
 ```
 ---
 ### Metadata
 Extract media metadata — auto-detects image (sharp) or video/audio (ffprobe)
 
 ```javascript
-const info = await ourin.metadata(buffer)
+const info = await rahadi.metadata(buffer)
 ```
 
 Result JSON
@@ -651,37 +651,10 @@ For complete documentation, installation guides, and implementation examples, pl
 
 ### 🙌 Contributors outside the Baileys code
 
-Thanks to the following awesome contributors who help improve this project 💖
+Thanks 
 
-<table>
-  <tr>
-    <td align="center">
-      <a href="https://github.com/z4phdev">
-        <img src="https://github.com/z4phdev.png" width="80px;" style="border-radius:50%;" alt="Developer"/>
-        <br />
-        <sub><b>z4phdev</b></sub>
-      </a>
-    </td>
-<td align="center">
-      <a href="https://github.com/kiuur">
-        <img src="https://github.com/kiuur.png" width="80px;" style="border-radius:50%;" alt="Contributor"/>
-        <br />
-        <sub><b>KyuuRzy</b></sub>
-      </a>
-    </td>
-    <td align="center">
-      <a href="https://github.com/Nted3xec">
-        <img src="https://raw.githubusercontent.com/IkyyExecutive/IkyyBokep/main/uploads/1770205734777_31697_1770205733762_file_821.jpg" width="80px;" style="border-radius:50%;" alt="Contributor"/>
-        <br />
-        <sub><b>Nted3xec</b></sub>
-      </a>
-    </td>
-    <td align="center">
-      <a href="https://github.com/LuckyArch">
-        <img src="https://avatars.githubusercontent.com/u/246404367?v=4" width="80px;" style="border-radius:50%;" alt="Contributor"/>
-        <br />
-        <sub><b>Zann</b></sub>
-      </a>
-    </td>
-  </tr>
-</table>
+@RahadiDev
+@whiskeysockets
+@Ikyy
+@Tuhan yg maha esa 
+@ortu
